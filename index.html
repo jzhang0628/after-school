@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bright Minds Afterschool</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Baloo 2', cursive; background: #fef6f0; color: #333; scroll-behavior: smooth; }
+    
+    header { background: #ff6f61; color: white; padding: 20px 0; text-align: center; position: sticky; top: 0; z-index: 1000; }
+    nav a { margin: 0 15px; color: white; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+
+    /* Announcement Banner */
+    .announcement { background:#ffd166; color:#ff6f61; text-align:center; padding:10px; font-weight:bold; }
+
+    /* Hero */
+    .hero { background: url('https://images.unsplash.com/photo-1599058917210-2bb3c3e16ff7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2hpbGRyfHx8fHx8MTY5NTI4NDEwNQ&ixlib=rb-4.0.3&q=80&w=1400') center/cover no-repeat; color: white; padding: 100px 20px; text-align: center; }
+    .hero h1 { font-size: 3em; margin-bottom: 20px; text-shadow: 2px 2px 4px #000; }
+    .hero p { font-size: 1.5em; text-shadow: 1px 1px 3px #000; }
+    .hero .button { margin-top: 20px; padding: 15px 30px; background: #ffd166; color: #ff6f61; font-weight: bold; border-radius: 10px; text-decoration: none; transition: 0.3s; }
+    .hero .button:hover { background: #ff6f61; color: white; }
+
+    section { padding: 60px 20px; max-width: 1200px; margin: auto; opacity: 0; transform: translateY(50px); transition: all 1s ease; }
+    section.visible { opacity: 1; transform: translateY(0); }
+
+    section h2 { color: #ff6f61; margin-bottom: 20px; text-align: center; }
+    section p { text-align: center; margin-bottom: 40px; font-size: 1.1em; }
+
+    /* Programs */
+    .programs { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .program { background: #fff3e0; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
+    .program:hover { transform: translateY(-10px); }
+    .program img { width: 80px; margin-bottom: 15px; }
+    .program h3 { margin-bottom: 10px; color: #ff6f61; }
+
+    /* Enrollment */
+    .enroll { text-align: center; background: #ffd166; padding: 60px 20px; border-radius: 20px; margin: 40px 0; }
+    .enroll a { padding: 15px 30px; background: #ff6f61; color: white; font-weight: bold; border-radius: 10px; text-decoration: none; transition: 0.3s; }
+    .enroll a:hover { background: #ff4f3a; }
+
+    /* Photo Gallery */
+    #gallery img { width: 100%; border-radius: 15px; }
+
+    /* Contact */
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; }
+    .contact-info p { margin-bottom: 15px; }
+    .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ccc; }
+    .contact-form button { background: #ff6f61; color: white; padding: 12px 25px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+    .contact-form button:hover { background: #ff4f3a; }
+
+    /* Testimonials */
+    .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .testimonial { background: #fff3e0; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; font-style: italic; }
+
+    iframe { width: 100%; height: 300px; border: 0; border-radius: 15px; }
+
+    footer { background: #ff6f61; color: white; text-align: center; padding: 30px 20px; margin-top: 40px; }
+
+    @media(max-width: 900px) { .contact { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bright Minds Afterschool</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#enroll">Enroll</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+      <a href="#location">Location</a>
+    </nav>
+  </header>
+
+  <!-- Announcement Banner -->
+  <div class="announcement">📢 Enrollment for Fall 2025 is now open! Limited spots available.</div>
+
+  <div class="hero">
+    <h1>Learning, Fun & Growth After School</h1>
+    <p>Safe, engaging, and educational programs for kids of all ages.</p>
+    <a href="#enroll" class="button">Enroll Today</a>
+  </div>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Bright Minds Afterschool provides a safe and inspiring environment for children to grow academically and socially. Our experienced staff ensures each child gets personalized attention while enjoying creative and fun activities.</p>
+  </section>
+
+  <section id="programs">
+    <h2>Our Programs</h2>
+    <div class="programs">
+      <div class="program">
+        <img src="https://img.icons8.com/color/96/000000/books.png" alt="Homework">
+        <h3>Homework Help</h3>
+        <p>Guided study and tutoring to help children succeed in school.</p>
+      </div>
+      <div class="program">
+        <img src="https://img.icons8.com/color/96/000000/robot.png" alt="STEM">
+        <h3>STEM & Coding</h3>
+        <p>Fun experiments and coding activities to spark curiosity.</p>
+      </div>
+      <div class="program">
+        <img src="https://img.icons8.com/color/96/000000/paint-palette.png" alt="Arts">
+        <h3>Arts & Crafts</h3>
+        <p>Creative projects that let kids express themselves.</p>
+      </div>
+      <div class="program">
+        <img src="https://img.icons8.com/color/96/000000/soccer-ball.png" alt="Sports">
+        <h3>Sports & Fitness</h3>
+        <p>Active games to keep kids healthy and energized.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="enroll" id="enroll">
+    <h2>Ready to Join?</h2>
+    <p>Enroll your child today and give them an after-school experience full of fun and learning!</p>
+    <a href="#contact">Enroll Now</a>
+  </section>
+
+  <!-- Photo Gallery -->
+  <section id="gallery">
+    <h2>Our Activities</h2>
+    <p>Check out some fun moments from our afterschool programs!</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:15px;">
+      <img src="https://images.unsplash.com/photo-1581091870623-62e41e5f147f?crop=entropy&cs=tinysrgb&fit=max&w=400&q=80" alt="Arts activity">
+      <img src="https://images.unsplash.com/photo-1573495628362-5a4b95d2c1d6?crop=entropy&cs=tinysrgb&fit=max&w=400&q=80" alt="Coding activity">
+      <img src="https://images.unsplash.com/photo-1603075377208-04f14be7e2b2?crop=entropy&cs=tinysrgb&fit=max&w=400&q=80" alt="Sports activity">
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Parents Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">"Bright Minds has been amazing for my daughter. She looks forward to every day!" - Sarah T.</div>
+      <div class="testimonial">"The staff are friendly and professional. Highly recommend this afterschool program!" - Michael L.</div>
+      <div class="testimonial">"My son loves the STEM activities. He’s learning so much while having fun." - Jennifer K.</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p>Email: info@brightminds.com</p>
+      <p>Phone: (123) 456-7890</p>
+      <p>Address: 123 Learning Lane, Tracy, CA</p>
+    </div>
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="location">
+    <h2>Our Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086202394311!2d-121.4311676846814!3d37.73618231934788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbb1a2a21efed%3A0x89efc5b4c7f6dc1b!2sTracy%2C%20CA!5e0!3m2!1sen!2sus!4v1695286085400!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bright Minds Afterschool. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Scroll animation
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY + window.innerHeight * 0.75;
+      sections.forEach(sec => {
+        if (scrollPos > sec.offsetTop) {
+          sec.classList.add('visible');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
